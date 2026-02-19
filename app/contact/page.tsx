@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AnimatedReveal } from "@/components/AnimatedReveal";
-import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
+import { ContactForm } from "@/components/ContactForm";
 import { CopyButton } from "@/components/CopyButton";
 import { Section } from "@/components/Section";
 import { profile } from "@/data/profile";
@@ -17,45 +17,7 @@ export default function ContactPage() {
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <AnimatedReveal>
           <Card>
-            <form
-              className="space-y-5"
-              action={`mailto:${profile.email}`}
-              method="post"
-              encType="text/plain"
-            >
-              <div className="grid gap-4">
-                <label className="text-xs uppercase tracking-[0.2em] text-muted">
-                  Name
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    className="mt-2 w-full border border-border bg-bg px-4 py-3 text-sm text-fg focus:border-fg focus:outline-none"
-                  />
-                </label>
-                <label className="text-xs uppercase tracking-[0.2em] text-muted">
-                  Email
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    className="mt-2 w-full border border-border bg-bg px-4 py-3 text-sm text-fg focus:border-fg focus:outline-none"
-                  />
-                </label>
-                <label className="text-xs uppercase tracking-[0.2em] text-muted">
-                  Message
-                  <textarea
-                    name="message"
-                    rows={5}
-                    required
-                    className="mt-2 w-full border border-border bg-bg px-4 py-3 text-sm text-fg focus:border-fg focus:outline-none"
-                  />
-                </label>
-              </div>
-              <Button type="submit" variant="primary">
-                Send Message
-              </Button>
-            </form>
+            <ContactForm />
           </Card>
         </AnimatedReveal>
         <AnimatedReveal delay={0.1}>

@@ -33,16 +33,20 @@ export const metrics = [
 
 export const techStack = [
   "TypeScript",
+  "React",
   "Next.js",
-  "Node.js",
-  "PostgreSQL",
-  "Redis",
-  "Kafka",
-  "AWS",
   "Spring Boot",
-  "Security",
+  "Node.js",
   "Python",
-  "Rust"
+  "Go",
+  "PostgreSQL",
+  "Kafka",
+  "Docker",
+  "Git",
+  "Flutter",
+  "SwiftUI",
+  "React Native",
+  "Expo"
 ];
 
 export const projects: Project[] = [

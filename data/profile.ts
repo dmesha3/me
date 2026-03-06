@@ -6,7 +6,7 @@ export const profile = {
   location: "Tanzania",
   email: "kazimoto17@proton.me",
   socials: {
-    github: "https://github.com/meshackkazimoto",
+    github: "https://github.com/dmesha3",
     linkedin: "https://www.linkedin.com/in/meshackkazimoto",
     x: "https://x.com/dmesha_"
   }
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "Spring Boot", "PostgreSQL", "Docker"],
     role: "Lead Developer",
     projectUrl: "https://winvo.io",
-    // githubUrl: "https://github.com/meshackkazimoto/winvo",
+    // githubUrl: "https://github.com/dmesha3/winvo",
     // openSource: false
   },
   {
@@ -129,7 +129,7 @@ export const projects: Project[] = [
       "JTX allows developers to define transformation rules using a simple JSON specification. The engine compiles the spec and transforms incoming JSON into the required structure, enabling reusable, testable, and scalable data transformations across services.",
     tech: ["Java", "Spring Boot", "Jackson", "Maven", "Picocli"],
     role: "Backend / System Architect",
-    githubUrl: "https://github.com/meshackkazimoto/json-transform"
+    githubUrl: "https://github.com/dmesha3/json-transform"
   },
   {
     name: "elgon",
@@ -141,7 +141,7 @@ export const projects: Project[] = [
       "Designed a fast core (router + middleware + context) with optional production modules: health/ready/live, structured logging, metrics, OpenTelemetry, config, auth/RBAC, OpenAPI, DB adapters, migrations, and jobs—without slowing the hot path.",
     tech: ["Go", "net/http", "OpenTelemetry", "Prometheus", "Redis", "OpenAPI"],
     role: "Founder / Lead Engineer",
-    githubUrl: "https://github.com/meshackkazimoto/elgon",
+    githubUrl: "https://github.com/dmesha3/elgon",
     projectUrl: "https://elgon-go.vercel.app",
     openSource: true,
   },
@@ -214,7 +214,7 @@ export const projects: Project[] = [
     ],
     role: "Founder / Lead Engineer",
     // projectUrl: "https://footballintel.co.tz",
-    githubUrl: "https://github.com/meshackkazimoto/football-intel",
+    githubUrl: "https://github.com/dmesha3/football-intel",
     openSource: true
   },
   {
@@ -228,7 +228,7 @@ export const projects: Project[] = [
     tech: ["Rust", "CLI"],
     role: "Founder / Lead Engineer",
     // projectUrl: "https://fastrepo.dev",
-    githubUrl: "https://github.com/meshackkazimoto/fastrepo",
+    githubUrl: "https://github.com/dmesha3/fastrepo",
     openSource: true
   },
   {
@@ -241,7 +241,7 @@ export const projects: Project[] = [
       "Built a SwiftUI app with queue-based playback, playlists, search and smart sorting, favorites, lock-screen controls, background audio, and a future-ready source abstraction (LocalSource now, RemoteSource later).",
     tech: ["SwiftUI", "AVFoundation", "MediaPlayer", "SwiftData", "MVVM"],
     role: "iOS Developer",
-    githubUrl: "https://github.com/meshackkazimoto/dmusic",
+    githubUrl: "https://github.com/dmesha3/dmusic",
     // openSource: false
   },
   {
@@ -255,7 +255,7 @@ export const projects: Project[] = [
     tech: ["PNPM", "Next.js", "Flutter", "PostgreSQL", "Prisma"],
     role: "Lead Engineer",
     projectUrl: "https://event-platform-web-one.vercel.app/en",
-    githubUrl: "https://github.com/meshackkazimoto/event-platform"
+    githubUrl: "https://github.com/dmesha3/event-platform"
   },
   {
     name: "Opsync",
@@ -267,7 +267,7 @@ export const projects: Project[] = [
       "Built a unified system with a scalable architecture using modern runtimes and data layers.",
     tech: ["Bun", "Next.js", "Expo", "PostgreSQL", "Effect", "Drizzle"],
     role: "Founder / Lead Engineer",
-    githubUrl: "https://github.com/meshackkazimoto/opsync",
+    githubUrl: "https://github.com/dmesha3/opsync",
   }
 ];
 
@@ -343,9 +343,9 @@ export const currentlyBuilding = [
       "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries for real-world systems."
   },
   {
-    title: "Opsync",
+    title: "JSON Transform Engine (JTX)",
     detail:
-      "A modern office management system focused on operational efficiency, built with a fast and scalable architecture."
+      "A lightweight JSON transformation engine for building integrations, ETL pipelines, and API middleware."
   }
 ];
 

@@ -108,6 +108,30 @@ export const projects: Project[] = [
     projectUrl: "https://ibankplus.dcb.co.tz",
   },
   {
+    name: "Zama",
+    description:
+      "Most user-friendly, efficient, and reliable payment solution for your business.",
+    problem:
+      "Digital operation stores or service is big challengs for business in Tanzania.",
+    solution:
+      "Customers can place orders and make payments, specifying their choices, which minimizes repetitive inquiries.",
+    tech: ["Next.js", "React", "Prisma", "PostgreSQL"],
+    role: "Frontend Developer",
+    projectUrl: "https://www.zamapay.me",
+  },
+  {
+    name: "JSON Transform Engine (JTX)",
+    description:
+      "A lightweight JSON transformation engine for building integrations, ETL pipelines, and API middleware.",
+    problem:
+      "Modern systems exchange JSON data but often use incompatible formats. Developers repeatedly write custom mapping code to convert structures, rename fields, and normalize data across services.",
+    solution:
+      "JTX allows developers to define transformation rules using a simple JSON specification. The engine compiles the spec and transforms incoming JSON into the required structure, enabling reusable, testable, and scalable data transformations across services.",
+    tech: ["Java", "Spring Boot", "Jackson", "Maven", "Picocli"],
+    role: "Backend / System Architect",
+    githubUrl: "https://github.com/meshackkazimoto/json-transform"
+  },
+  {
     name: "elgon",
     description:
       "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries.",

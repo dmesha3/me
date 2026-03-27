@@ -78,24 +78,6 @@ export const projects: Project[] = [
     // openSource: false
   },
   {
-    name: "Wakala Portal",
-    description:
-      "A WhatsApp-based platform that simplifies float exchanges between agents and super agents.",
-    problem:
-      "Manual coordination between agents caused delays, errors, and lack of transaction visibility.",
-    solution:
-      "Built a system that automates float requests and approvals through WhatsApp, with real-time tracking and a centralized admin dashboard.",
-    tech: [
-      "Next.js",
-      "React Native",
-      "PostgreSQL",
-      "Prisma",
-      "WhatsApp API"
-    ],
-    role: "Lead Developer",
-    projectUrl: "https://wakalaportal.co.tz",
-  },
-  {
     name: "Internet Banking System (DCB Commercial Bank)",
     description:
       "A web-based internet banking platform for retail and business customers.",
@@ -268,7 +250,26 @@ export const projects: Project[] = [
     tech: ["Bun", "Next.js", "Expo", "PostgreSQL", "Effect", "Drizzle"],
     role: "Founder / Lead Engineer",
     githubUrl: "https://github.com/dmesha3/opsync",
-  }
+  },
+  {
+    name: "Wakala Portal",
+    description:
+      "A WhatsApp-based platform that simplifies float exchanges between agents and super agents.",
+    problem:
+      "Manual coordination between agents caused delays, errors, and lack of transaction visibility.",
+    solution:
+      "Built a system that automates float requests and approvals through WhatsApp, with real-time tracking and a centralized admin dashboard.",
+    tech: [
+      "Next.js",
+      "React Native",
+      "PostgreSQL",
+      "Prisma",
+      "WhatsApp API"
+    ],
+    role: "Lead Developer",
+    // projectUrl: "https://wakalaportal.co.tz",
+    openSource: false
+  },
 ];
 
 export const experiences = [

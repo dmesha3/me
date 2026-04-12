@@ -315,11 +315,6 @@ export const currentFocus = [
 
 export const currentlyBuilding = [
   {
-    title: "Wakala Portal",
-    detail:
-      "A WhatsApp-driven platform that automates float exchanges between agents and super agents, reducing manual coordination."
-  },
-  {
     title: "Elgon",
     detail:
       "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries for real-world systems."
@@ -328,6 +323,11 @@ export const currentlyBuilding = [
     title: "JSON Transform Engine (JTX)",
     detail:
       "A lightweight JSON transformation engine for building integrations, ETL pipelines, and API middleware."
+  },
+  {
+    title: "Zama",
+    detail: 
+      "Most user-friendly, efficient, and reliable payment solution for your business."
   }
 ];
 

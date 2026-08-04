@@ -35,18 +35,9 @@ export const techStack = [
   "TypeScript",
   "React",
   "Next.js",
-  "Spring Boot",
-  "Node.js",
-  "Python",
   "Go",
   "PostgreSQL",
-  "Kafka",
-  "Docker",
-  "Git",
   "Flutter",
-  "SwiftUI",
-  "React Native",
-  "Expo"
 ];
 
 export const projects: Project[] = [

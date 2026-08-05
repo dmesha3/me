@@ -35,6 +35,7 @@ export const techStack = [
   "TypeScript",
   "React",
   "Next.js",
+  "Spring Boot",
   "Go",
   "PostgreSQL",
   "Flutter",
@@ -167,80 +168,6 @@ export const projects: Project[] = [
     tech: ["Flutter", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes"],
     role: "Full Stack Developer",
     openSource: false
-  },
-  {
-    name: "Football Intel",
-    description:
-      "A sports data platform providing advanced statistics, technical analysis, and match predictions for the Tanzania Premier League.",
-    problem:
-      "Clubs, analysts, and fans lacked access to structured and insightful football data.",
-    solution:
-      "Designed a data-driven platform with detailed match stats, analytics, and prediction logic tailored to the local league.",
-    tech: [
-      "Bun",
-      "Expo",
-      "Hono",
-      "Turborepo",
-      "PostgreSQL",
-      "GraphQL",
-      "Drizzle"
-    ],
-    role: "Founder / Lead Engineer",
-    // projectUrl: "https://footballintel.co.tz",
-    githubUrl: "https://github.com/dmesha3/football-intel",
-    openSource: true
-  },
-  {
-    name: "Fastrepo",
-    description:
-      "A CLI-based monorepo tool for managing and inspecting packages efficiently.",
-    problem:
-      "Large monorepos are hard to navigate, slow to inspect, and difficult to maintain.",
-    solution:
-      "Built a high-performance Rust CLI that analyzes monorepo structures and provides fast, actionable insights.",
-    tech: ["Rust", "CLI"],
-    role: "Founder / Lead Engineer",
-    // projectUrl: "https://fastrepo.dev",
-    githubUrl: "https://github.com/dmesha3/fastrepo",
-    openSource: true
-  },
-  {
-    name: "dMusic",
-    description:
-      "A premium local-first iOS music player built with SwiftUI, focused on smooth playback, elegant interactions, and offline reliability.",
-    problem:
-      "Many mobile music players either feel outdated or depend heavily on internet services, making local library management and high-quality playback inconsistent.",
-    solution:
-      "Built a SwiftUI app with queue-based playback, playlists, search and smart sorting, favorites, lock-screen controls, background audio, and a future-ready source abstraction (LocalSource now, RemoteSource later).",
-    tech: ["SwiftUI", "AVFoundation", "MediaPlayer", "SwiftData", "MVVM"],
-    role: "iOS Developer",
-    githubUrl: "https://github.com/dmesha3/dmusic",
-    // openSource: false
-  },
-  {
-    name: "Event Management Platform",
-    description:
-      "An event management system with ticketing, QR code scanning, and attendee tracking.",
-    problem:
-      "Event organizers lacked efficient tools for ticket validation and crowd management.",
-    solution:
-      "Built a cross-platform system for ticket sales, QR-based check-ins, and real-time attendee monitoring.",
-    tech: ["PNPM", "Next.js", "Flutter", "PostgreSQL", "Prisma"],
-    role: "Lead Engineer",
-    projectUrl: "https://event-platform-web-one.vercel.app/en",
-    githubUrl: "https://github.com/dmesha3/event-platform"
-  },
-  {
-    name: "Opsync",
-    description:
-      "A modern office management system designed to streamline internal operations.",
-    problem:
-      "Organizations struggle with fragmented tools for managing daily office workflows.",
-    solution:
-      "Built a unified system with a scalable architecture using modern runtimes and data layers.",
-    tech: ["Bun", "Next.js", "Expo", "PostgreSQL", "Effect", "Drizzle"],
-    role: "Founder / Lead Engineer",
-    githubUrl: "https://github.com/dmesha3/opsync",
   },
 ];
 

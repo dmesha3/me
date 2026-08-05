@@ -22,6 +22,7 @@ export type Project = {
   projectUrl?: string;
   githubUrl?: string;
   openSource?: boolean;
+  screenshots?: string[];
 };
 
 export const metrics = [
@@ -94,30 +95,21 @@ export const projects: Project[] = [
     projectUrl: "https://www.zamapay.me",
   },
   {
-    name: "JSON Transform Engine (JTX)",
+    name: "NMB Kikundi",
     description:
-      "A lightweight JSON transformation engine for building integrations, ETL pipelines, and API middleware.",
+      "A group savings and investment account by NMB Bank Plc for formal and informal groups (VICOBA, VSLAs, family groups, or friends), enabling contributions, lending, and digital management.",
     problem:
-      "Modern systems exchange JSON data but often use incompatible formats. Developers repeatedly write custom mapping code to convert structures, rename fields, and normalize data across services.",
+      "Savings groups in Tanzania rely on manual cash handling, paper records, and in-person meetings, which limits transparency, trust, and scale.",
     solution:
-      "JTX allows developers to define transformation rules using a simple JSON specification. The engine compiles the spec and transforms incoming JSON into the required structure, enabling reusable, testable, and scalable data transformations across services.",
-    tech: ["Java", "Spring Boot", "Jackson", "Maven", "Picocli"],
-    role: "Backend / System Architect",
-    githubUrl: "https://github.com/dmesha3/json-transform"
-  },
-  {
-    name: "elgon",
-    description:
-      "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries.",
-    problem:
-      "Many Go frameworks are either too minimal for production readiness or become heavy when you add logging, metrics, health checks, auth, and OpenAPI.",
-    solution:
-      "Designed a fast core (router + middleware + context) with optional production modules: health/ready/live, structured logging, metrics, OpenTelemetry, config, auth/RBAC, OpenAPI, DB adapters, migrations, and jobs—without slowing the hot path.",
-    tech: ["Go", "net/http", "OpenTelemetry", "Prometheus", "Redis", "OpenAPI"],
-    role: "Founder / Lead Engineer",
-    githubUrl: "https://github.com/dmesha3/elgon",
-    projectUrl: "https://elgon-go.vercel.app",
-    openSource: true,
+      "Built the mobile and mini-app experience inside NMB Mkononi and *150*66# that lets groups contribute, lend, and manage their account digitally.",
+    tech: ["Flutter", "Spring Boot", "PostgreSQL", "USSD"],
+    role: "Frontend Developer",
+    screenshots: [
+      "/projects/nmb-kikundi/1.png",
+      "/projects/nmb-kikundi/2.png",
+      "/projects/nmb-kikundi/3.png",
+    ],
+    // openSource: false
   },
   {
     name: "Voice AI Platform",
@@ -169,13 +161,39 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     openSource: false
   },
+  {
+    name: "JSON Transform Engine (JTX)",
+    description:
+      "A lightweight JSON transformation engine for building integrations, ETL pipelines, and API middleware.",
+    problem:
+      "Modern systems exchange JSON data but often use incompatible formats. Developers repeatedly write custom mapping code to convert structures, rename fields, and normalize data across services.",
+    solution:
+      "JTX allows developers to define transformation rules using a simple JSON specification. The engine compiles the spec and transforms incoming JSON into the required structure, enabling reusable, testable, and scalable data transformations across services.",
+    tech: ["Java", "Spring Boot", "Jackson", "Maven", "Picocli"],
+    role: "Backend / System Architect",
+    githubUrl: "https://github.com/dmesha3/json-transform"
+  },
+  {
+    name: "elgon",
+    description:
+      "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries.",
+    problem:
+      "Many Go frameworks are either too minimal for production readiness or become heavy when you add logging, metrics, health checks, auth, and OpenAPI.",
+    solution:
+      "Designed a fast core (router + middleware + context) with optional production modules: health/ready/live, structured logging, metrics, OpenTelemetry, config, auth/RBAC, OpenAPI, DB adapters, migrations, and jobs—without slowing the hot path.",
+    tech: ["Go", "net/http", "OpenTelemetry", "Prometheus", "Redis", "OpenAPI"],
+    role: "Founder / Lead Engineer",
+    githubUrl: "https://github.com/dmesha3/elgon",
+    projectUrl: "https://elgon-go.vercel.app",
+    openSource: true,
+  },
 ];
 
 export const experiences = [
   {
     company: "Independent",
     title: "Founder & Lead Engineer",
-    period: "2025 -- Present",
+    period: "2026 -- Present",
     achievements: [
       "Building and maintaining production systems including Wakala Portal, Football Intel, and Opsync.",
       "Designing and implementing full-stack solutions across web, mobile, and backend services.",
@@ -186,7 +204,7 @@ export const experiences = [
   {
     company: "Amecore Technologies Co. Ltd",
     title: "Software Developer",
-    period: "2024 -- 2025",
+    period: "2024 -- 2026",
     achievements: [
       "Developed full-stack financial solutions including POS systems, mobile apps, and web applications.",
       "Worked on core banking-related platforms such as Winvo and internal financial tools.",
@@ -233,6 +251,11 @@ export const currentFocus = [
 
 export const currentlyBuilding = [
   {
+    title: "Zama",
+    detail: 
+      "Most user-friendly, efficient, and reliable payment solution for your business."
+  },
+  {
     title: "Elgon",
     detail:
       "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries for real-world systems."
@@ -242,11 +265,6 @@ export const currentlyBuilding = [
     detail:
       "A lightweight JSON transformation engine for building integrations, ETL pipelines, and API middleware."
   },
-  {
-    title: "Zama",
-    detail: 
-      "Most user-friendly, efficient, and reliable payment solution for your business."
-  }
 ];
 
 export const navigation = [

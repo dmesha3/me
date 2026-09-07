@@ -114,19 +114,15 @@ export const projects: Project[] = [
   {
     name: "Forge",
     description:
-      "An operating system for branded content that connects brands with creators to launch campaigns, manage applications, review submissions, track performance, and handle creator payouts.",
+      "A branded content platform that connects brands with creators to launch and manage campaigns.",
     problem:
-      "Brands often manage creator campaigns across scattered tools: spreadsheets, DMs, manual approvals, content links, performance reports, and payout tracking. This makes it difficult to know which creators applied, what content was submitted, how campaigns are performing, and how much is owed.",
+      "Brands struggle to manage creator campaigns, approvals, content tracking, and payouts in one place.",
     solution:
-      "Built a two-sided campaign platform with dedicated brand and creator dashboards. Brands can create campaigns, define content rules, approve creator applications, review submitted posts, monitor reports, and track spend. Creators can discover campaigns, apply to join, submit published content from connected platforms, track application progress, and monitor earnings.",
-    tech: [
-      "Next.js",
-      "React",
-      "TypeScript",
-    ],
+      "Built a two-sided platform where brands manage campaigns and creators apply, submit content, and track progress.",
+    tech: ["Next.js", "React", "TypeScript"],
     role: "Frontend Developerr",
     projectUrl: "https://forge-tz.vercel.app",
-    openSource: false,
+    // openSource: false,
   },
   {
     name: "Voice AI Platform",

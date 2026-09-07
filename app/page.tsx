@@ -165,9 +165,6 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 text-xs uppercase tracking-[0.2em] text-muted">
-                Updated quarterly based on product roadmap.
-              </div>
             </div>
           </AnimatedReveal>
           <AnimatedReveal delay={0.1}>

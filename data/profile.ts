@@ -126,7 +126,6 @@ export const projects: Project[] = [
     ],
     role: "Frontend Developerr",
     projectUrl: "https://forge-tz.vercel.app",
-    // githubUrl: "https://github.com/dmesha3/forge",
     openSource: false,
   },
   {

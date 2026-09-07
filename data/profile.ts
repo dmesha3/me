@@ -268,6 +268,11 @@ export const currentFocus = [
 
 export const currentlyBuilding = [
   {
+    title: "Forge",
+    detail:
+      "An operating system for branded content that helps brands launch creator campaigns, manage applications, review submissions, track performance, and handle payouts.",
+  },
+  {
     title: "Zama",
     detail:
       "Most user-friendly, efficient, and reliable payment solution for your business.",
@@ -276,11 +281,6 @@ export const currentlyBuilding = [
     title: "Elgon",
     detail:
       "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries for real-world systems.",
-  },
-  {
-    title: "JSON Transform Engine (JTX)",
-    detail:
-      "A lightweight JSON transformation engine for building integrations, ETL pipelines, and API middleware.",
   },
 ];
 

@@ -26,13 +26,14 @@ export type Project = {
 };
 
 export const techStack = [
-  "TypeScript",
   "React",
   "Next.js",
   "Spring Boot",
   "Go",
   "PostgreSQL",
+  "Swift",
   "Flutter",
+  "Kotlin",
 ];
 
 export const projects: Project[] = [

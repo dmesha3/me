@@ -8,8 +8,8 @@ export const profile = {
   socials: {
     github: "https://github.com/dmesha3",
     linkedin: "https://www.linkedin.com/in/meshackkazimoto",
-    x: "https://x.com/dmesha_"
-  }
+    x: "https://x.com/dmesha_",
+  },
 };
 
 export type Project = {
@@ -29,7 +29,7 @@ export const metrics = [
   { label: "Years Experience", value: "4+" },
   { label: "Products Shipped", value: "20+" },
   { label: "Systems Built", value: "35+" },
-  { label: "Latency Wins", value: "<50ms" }
+  { label: "Latency Wins", value: "<50ms" },
 ];
 
 export const techStack = [
@@ -112,6 +112,24 @@ export const projects: Project[] = [
     // openSource: false
   },
   {
+    name: "Forge",
+    description:
+      "An operating system for branded content that connects brands with creators to launch campaigns, manage applications, review submissions, track performance, and handle creator payouts.",
+    problem:
+      "Brands often manage creator campaigns across scattered tools: spreadsheets, DMs, manual approvals, content links, performance reports, and payout tracking. This makes it difficult to know which creators applied, what content was submitted, how campaigns are performing, and how much is owed.",
+    solution:
+      "Built a two-sided campaign platform with dedicated brand and creator dashboards. Brands can create campaigns, define content rules, approve creator applications, review submitted posts, monitor reports, and track spend. Creators can discover campaigns, apply to join, submit published content from connected platforms, track application progress, and monitor earnings.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+    ],
+    role: "Frontend Developerr",
+    projectUrl: "https://forge-tz.vercel.app",
+    // githubUrl: "https://github.com/dmesha3/forge",
+    openSource: false,
+  },
+  {
     name: "Voice AI Platform",
     description:
       "A web platform for managing and delivering AI-powered voice solutions.",
@@ -147,7 +165,7 @@ export const projects: Project[] = [
       "Built a responsive web interface for seat selection, booking, and seamless payment integration.",
     tech: ["Next.js", "Supabase"],
     role: "Frontend Developer",
-    projectUrl: "https://fasttickets.vercel.app/"
+    projectUrl: "https://fasttickets.vercel.app/",
   },
   {
     name: "Crowdfunding Platform",
@@ -159,7 +177,7 @@ export const projects: Project[] = [
       "Developed a full-stack system with group management, contribution tracking, and secure backend services.",
     tech: ["Flutter", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes"],
     role: "Full Stack Developer",
-    openSource: false
+    openSource: false,
   },
   {
     name: "JSON Transform Engine (JTX)",
@@ -171,7 +189,7 @@ export const projects: Project[] = [
       "JTX allows developers to define transformation rules using a simple JSON specification. The engine compiles the spec and transforms incoming JSON into the required structure, enabling reusable, testable, and scalable data transformations across services.",
     tech: ["Java", "Spring Boot", "Jackson", "Maven", "Picocli"],
     role: "Backend / System Architect",
-    githubUrl: "https://github.com/dmesha3/json-transform"
+    githubUrl: "https://github.com/dmesha3/json-transform",
   },
   {
     name: "elgon",
@@ -198,8 +216,8 @@ export const experiences = [
       "Building and maintaining production systems including Wakala Portal, Football Intel, and Opsync.",
       "Designing and implementing full-stack solutions across web, mobile, and backend services.",
       "Developing transaction-heavy and real-time systems with secure authentication and role-based access.",
-      "Managing system architecture, deployments, and infrastructure using Docker, VPS, and modern tooling."
-    ]
+      "Managing system architecture, deployments, and infrastructure using Docker, VPS, and modern tooling.",
+    ],
   },
   {
     company: "Amecore Technologies Co. Ltd",
@@ -209,8 +227,8 @@ export const experiences = [
       "Developed full-stack financial solutions including POS systems, mobile apps, and web applications.",
       "Worked on core banking-related platforms such as Winvo and internal financial tools.",
       "Designed and implemented backend services, APIs, and system architectures.",
-      "Handled infrastructure setup and deployments using VPS, Docker, and production-ready environments."
-    ]
+      "Handled infrastructure setup and deployments using VPS, Docker, and production-ready environments.",
+    ],
   },
   {
     company: "Oohbit Co. Ltd",
@@ -220,8 +238,8 @@ export const experiences = [
       "Built and maintained user-friendly web interfaces for multiple client projects.",
       "Worked on financial employee payment systems with a focus on clarity and usability.",
       "Developed frontend solutions for a digital billboard management platform.",
-      "Collaborated with backend teams to deliver stable and responsive applications."
-    ]
+      "Collaborated with backend teams to deliver stable and responsive applications.",
+    ],
   },
 ];
 
@@ -229,41 +247,41 @@ export const howIBuildSystems = [
   {
     title: "Clarify the risk model",
     description:
-      "Define failure modes early, align stakeholders on tradeoffs, and codify policy into system design."
+      "Define failure modes early, align stakeholders on tradeoffs, and codify policy into system design.",
   },
   {
     title: "Design for traceability",
     description:
-      "Every action produces a durable audit trail, making compliance and debugging part of the system."
+      "Every action produces a durable audit trail, making compliance and debugging part of the system.",
   },
   {
     title: "Ship with guardrails",
     description:
-      "Progressive rollouts, automated tests, and monitoring ensure reliability without slowing teams."
-  }
+      "Progressive rollouts, automated tests, and monitoring ensure reliability without slowing teams.",
+  },
 ];
 
 export const currentFocus = [
   "Financial infrastructure and transaction-heavy systems",
   "Applied AI tools for automation and decision support",
-  "Building scalable developer and operational tools for real-world products in Tanzania"
+  "Building scalable developer and operational tools for real-world products in Tanzania",
 ];
 
 export const currentlyBuilding = [
   {
     title: "Zama",
-    detail: 
-      "Most user-friendly, efficient, and reliable payment solution for your business."
+    detail:
+      "Most user-friendly, efficient, and reliable payment solution for your business.",
   },
   {
     title: "Elgon",
     detail:
-      "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries for real-world systems."
+      "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries for real-world systems.",
   },
   {
     title: "JSON Transform Engine (JTX)",
     detail:
-      "A lightweight JSON transformation engine for building integrations, ETL pipelines, and API middleware."
+      "A lightweight JSON transformation engine for building integrations, ETL pipelines, and API middleware.",
   },
 ];
 
@@ -272,5 +290,5 @@ export const navigation = [
   { label: "Projects", href: "/projects" },
   { label: "Experience", href: "/experience" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" }
+  { label: "Contact", href: "/contact" },
 ];

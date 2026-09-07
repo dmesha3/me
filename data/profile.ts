@@ -1,8 +1,8 @@
 export const profile = {
   name: "Meshack",
-  role: "Full-Stack Developer / Fintech Engineer",
+  role: "Frontend Developer",
   headline:
-    "I build resilient financial platforms, developer tooling, and data-intensive products with an obsession for clarity, security, and performance.",
+    "Frontend developer with experience in backend services and mobile applications. Based in Tanzania.",
   location: "Tanzania",
   email: "kazimoto17@proton.me",
   socials: {
@@ -24,13 +24,6 @@ export type Project = {
   openSource?: boolean;
   screenshots?: string[];
 };
-
-export const metrics = [
-  { label: "Years Experience", value: "4+" },
-  { label: "Products Shipped", value: "20+" },
-  { label: "Systems Built", value: "35+" },
-  { label: "Latency Wins", value: "<50ms" },
-];
 
 export const techStack = [
   "TypeScript",
@@ -85,7 +78,7 @@ export const projects: Project[] = [
   {
     name: "Zama",
     description:
-      "Most user-friendly, efficient, and reliable payment solution for your business.",
+      "An app that helps businesses take orders and accept payments.",
     problem:
       "Digital operation stores or service is big challengs for business in Tanzania.",
     solution:
@@ -120,7 +113,7 @@ export const projects: Project[] = [
     solution:
       "Built a two-sided platform where brands manage campaigns and creators apply, submit content, and track progress.",
     tech: ["Next.js", "React", "TypeScript"],
-    role: "Frontend Developerr",
+    role: "Frontend Developer",
     projectUrl: "https://forge-tz.vercel.app",
     // openSource: false,
   },
@@ -240,43 +233,43 @@ export const experiences = [
 
 export const howIBuildSystems = [
   {
-    title: "Clarify the risk model",
+    title: "Understand the project",
     description:
-      "Define failure modes early, align stakeholders on tradeoffs, and codify policy into system design.",
+      "I start by understanding what people need and what the app should do.",
   },
   {
-    title: "Design for traceability",
+    title: "Build it step by step",
     description:
-      "Every action produces a durable audit trail, making compliance and debugging part of the system.",
+      "I build the interface, connect the backend, and make sure the main features work well.",
   },
   {
-    title: "Ship with guardrails",
+    title: "Test and improve",
     description:
-      "Progressive rollouts, automated tests, and monitoring ensure reliability without slowing teams.",
+      "I test the app, fix issues, and use feedback to improve it.",
   },
 ];
 
 export const currentFocus = [
-  "Financial infrastructure and transaction-heavy systems",
-  "Applied AI tools for automation and decision support",
-  "Building scalable developer and operational tools for real-world products in Tanzania",
+  "Building web and mobile apps",
+  "Developing backend services and APIs",
+  "Making tools for developers and businesses in Tanzania",
 ];
 
 export const currentlyBuilding = [
   {
     title: "Forge",
     detail:
-      "An operating system for branded content that helps brands launch creator campaigns, manage applications, review submissions, track performance, and handle payouts.",
+      "A platform where brands and creators manage campaigns, content, and payments.",
   },
   {
     title: "Zama",
     detail:
-      "Most user-friendly, efficient, and reliable payment solution for your business.",
+      "An app that helps businesses take orders and accept payments.",
   },
   {
     title: "Elgon",
     detail:
-      "A performance-first Go web framework that stays close to net/http while shipping Spring Boot-like production batteries for real-world systems.",
+      "A Go framework for building web apps and APIs.",
   },
 ];
 

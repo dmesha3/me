@@ -8,12 +8,12 @@ import { profile } from "@/data/profile";
 
 export const metadata = {
   title: `Contact | ${profile.name}`,
-  description: "Start a conversation about building resilient systems."
+  description: "Get in touch to discuss a project."
 };
 
 export default function ContactPage() {
   return (
-    <Section eyebrow="Contact" title="Let's build something resilient">
+    <Section eyebrow="Contact" title="Let’s talk about your project">
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <AnimatedReveal>
           <Card>
@@ -61,9 +61,8 @@ export default function ContactPage() {
             <Card>
               <p className="text-xs uppercase tracking-[0.2em] text-muted">Availability</p>
               <p className="mt-3 text-sm text-muted">
-                I take on a small number of advisory roles and founder-led builds
-                each quarter. Share your goals and timeline, and I will respond
-                with fit and next steps.
+                Have a web, mobile, or backend project? Send me a message with
+                what you need and your timeline.
               </p>
             </Card>
           </div>

@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-muted">{profile.location}</p>
-            <p className="mt-3 font-display text-2xl">Build with clarity.</p>
+            <p className="mt-3 font-display text-2xl">Have a project in mind?</p>
           </div>
           <div className="flex flex-wrap items-center gap-4">
             <Link

@@ -11,7 +11,7 @@ import { CurrentlyBuilding } from "@/components/CurrentlyBuilding";
 import {
   currentFocus,
   howIBuildSystems,
-  metrics,
+  experiences,
   profile,
   projects,
   techStack
@@ -67,7 +67,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-6 space-y-2 text-xs uppercase tracking-[0.2em] text-muted">
                   <p>{profile.location}</p>
-                  <p>Available for select advisory + builds</p>
+                  <p>Available for development work</p>
                 </div>
               </div>
             </AnimatedReveal>
@@ -75,22 +75,28 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <Section eyebrow="Metrics" title="Operational impact at a glance">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {metrics.map((metric, index) => (
-            <AnimatedReveal key={metric.label} delay={index * 0.05}>
-              <Card>
+      <Section eyebrow="Background" title="Work experience">
+        <div className="grid gap-6 md:grid-cols-3">
+          {experiences.map((experience, index) => (
+            <AnimatedReveal key={experience.company} delay={index * 0.05}>
+              <Card className="h-full">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted">
-                  {metric.label}
+                  {experience.period}
                 </p>
-                <p className="mt-4 font-display text-3xl">{metric.value}</p>
+                <h3 className="mt-4 font-display text-xl">{experience.company}</h3>
+                <p className="mt-3 text-sm text-muted">{experience.title}</p>
               </Card>
             </AnimatedReveal>
           ))}
         </div>
+        <div className="mt-10">
+          <ButtonLink href="/experience" variant="outline">
+            View experience
+          </ButtonLink>
+        </div>
       </Section>
 
-      <Section eyebrow="Projects" title="Featured systems">
+      <Section eyebrow="Projects" title="Featured projects">
         <div className="grid gap-6 lg:grid-cols-3">
           {projects.slice(0, 3).map((project, index) => (
             <AnimatedReveal key={project.name} delay={index * 0.08}>
@@ -141,7 +147,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Framework" title="How I build systems">
+      <Section eyebrow="Process" title="How I work">
         <div className="grid gap-6 lg:grid-cols-3">
           {howIBuildSystems.map((item, index) => (
             <AnimatedReveal key={item.title} delay={index * 0.08}>

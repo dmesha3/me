@@ -22,7 +22,7 @@ const unbounded = Unbounded({
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} | Full-Stack Developer`,
+  title: `${profile.name} | ${profile.role}`,
   description: profile.headline,
   metadataBase: new URL("https://meshack.dev"),
   icons: {

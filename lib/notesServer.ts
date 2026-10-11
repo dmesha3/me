@@ -72,6 +72,15 @@ export function sessionCookieOptions() {
 }
 
 let pool: Pool | null = null;
+let syncHealth:
+  | {
+      checkedAt: number;
+      ok: boolean;
+      error?: string;
+    }
+  | null = null;
+
+const SYNC_HEALTH_TTL_MS = 30_000;
 
 function getPool() {
   const connectionString = (process.env.DATABASE_URL || "").trim();
@@ -85,10 +94,60 @@ function getPool() {
       connectionString.includes("sslmode=disable");
     pool = new Pool({
       connectionString,
-      ssl: isLocal ? undefined : { rejectUnauthorized: false }
+      ssl: isLocal ? undefined : { rejectUnauthorized: false },
+      connectionTimeoutMillis: 5000,
+      max: 3
     });
   }
   return pool;
+}
+
+export function syncErrorMessage(error: unknown) {
+  const code =
+    error && typeof error === "object" && "code" in error
+      ? String((error as { code?: unknown }).code)
+      : "";
+
+  if (code === "ENOTFOUND") {
+    return "Could not resolve the database host. Check DATABASE_URL and use a reachable Postgres connection string.";
+  }
+  if (code === "ECONNREFUSED") {
+    return "Could not connect to the notes database. Check that the database is running and accepting connections.";
+  }
+  if (code === "ETIMEDOUT" || code === "ETIMEOUT") {
+    return "The notes database connection timed out. Check your network or database connection string.";
+  }
+  return "Could not reach the notes database.";
+}
+
+export async function checkSyncConnection({ force = false } = {}) {
+  if (!isSyncConfigured()) {
+    return {
+      ok: false,
+      error: "Notes sync is not configured."
+    };
+  }
+
+  if (
+    !force &&
+    syncHealth &&
+    Date.now() - syncHealth.checkedAt < SYNC_HEALTH_TTL_MS
+  ) {
+    return syncHealth;
+  }
+
+  try {
+    await getPool().query("SELECT 1;");
+    syncHealth = { checkedAt: Date.now(), ok: true };
+    return syncHealth;
+  } catch (error) {
+    syncHealth = {
+      checkedAt: Date.now(),
+      ok: false,
+      error: syncErrorMessage(error)
+    };
+    return syncHealth;
+  }
 }
 
 export type SyncedState = {

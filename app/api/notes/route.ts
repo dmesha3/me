@@ -4,6 +4,7 @@ import {
   NOTES_SESSION_COOKIE,
   isSyncConfigured,
   readSyncedState,
+  syncErrorMessage,
   verifySessionToken,
   writeSyncedState
 } from "@/lib/notesServer";
@@ -32,7 +33,7 @@ export async function GET() {
   } catch (error) {
     console.error("Notes sync read failed:", error);
     return NextResponse.json(
-      { error: "Could not load synced notes." },
+      { error: syncErrorMessage(error) },
       { status: 503 }
     );
   }
@@ -78,7 +79,7 @@ export async function PUT(request: Request) {
   } catch (error) {
     console.error("Notes sync write failed:", error);
     return NextResponse.json(
-      { error: "Could not save synced notes." },
+      { error: syncErrorMessage(error) },
       { status: 503 }
     );
   }

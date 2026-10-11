@@ -9,6 +9,7 @@ export const notesQueryKeys = {
 export type NotesSession = {
   syncEnabled: boolean;
   unlocked: boolean;
+  syncError?: string;
 };
 
 export type SyncedNotesState = {

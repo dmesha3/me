@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
   NOTES_SESSION_COOKIE,
+  checkSyncConnection,
   createSessionToken,
   isPassphraseCorrect,
   isSyncConfigured,
@@ -60,6 +61,14 @@ export async function POST(request: NextRequest) {
   const parsed = unlockSchema.safeParse(payload);
   if (!parsed.success || !isPassphraseCorrect(parsed.data.passphrase.trim())) {
     return NextResponse.json({ error: "Wrong passphrase." }, { status: 401 });
+  }
+
+  const health = await checkSyncConnection({ force: true });
+  if (!health.ok) {
+    return NextResponse.json(
+      { error: health.error || "Could not reach the notes database." },
+      { status: 503 }
+    );
   }
 
   const response = NextResponse.json({ ok: true });

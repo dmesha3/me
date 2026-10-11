@@ -148,6 +148,7 @@ export function NotesApp() {
     if (sessionQuery.data) {
       setSyncDisabled(!sessionQuery.data.syncEnabled);
       setUnlocked(sessionQuery.data.syncEnabled && sessionQuery.data.unlocked);
+      setSyncError(sessionQuery.data.syncError ?? null);
     }
   }, [sessionQuery.data]);
 
@@ -184,7 +185,12 @@ export function NotesApp() {
             }
           | undefined;
         if (!body) {
-          setSyncError("Sync failed. Your notes are safe on this device and will retry.");
+          setSyncError(
+            apiMessage(
+              error,
+              "Sync failed. Your notes are safe on this device and will retry."
+            )
+          );
           return;
         }
         serverRevRef.current = body.updatedAt;
@@ -192,7 +198,12 @@ export function NotesApp() {
         setNotes(merged);
         return;
       }
-      setSyncError("Sync failed. Your notes are safe on this device and will retry.");
+      setSyncError(
+        apiMessage(
+          error,
+          "Sync failed. Your notes are safe on this device and will retry."
+        )
+      );
     }
   }, [pushNotes]);
 
@@ -229,7 +240,12 @@ export function NotesApp() {
         setSyncDisabled(true);
         return;
       }
-      setSyncError("Sync failed. Your notes are safe on this device and will retry.");
+      setSyncError(
+        apiMessage(
+          error,
+          "Sync failed. Your notes are safe on this device and will retry."
+        )
+      );
     }
   }, [pullNotes, schedulePush]);
 
@@ -403,7 +419,7 @@ export function NotesApp() {
   const syncStatus = syncBusy
     ? "Syncing..."
     : syncError
-      ? "Sync failed - will retry on next change"
+      ? syncError
       : lastSyncedAt
         ? `Synced · ${new Date(lastSyncedAt).toLocaleTimeString()}`
         : unlocked
@@ -416,7 +432,7 @@ export function NotesApp() {
         <div className="mb-4 flex flex-col gap-3 border border-border bg-surface p-4 md:flex-row md:items-center md:justify-between">
           <p className="text-[10px] uppercase tracking-[0.2em] text-muted">
             {syncEnabled === false &&
-              "Stored on this device only - sync not configured"}
+              (syncError || "Stored on this device only - sync not configured")}
             {syncEnabled && !unlocked && "Sync available - unlock to sync devices"}
             {syncEnabled && unlocked && (syncStatus || "Connected")}
           </p>
